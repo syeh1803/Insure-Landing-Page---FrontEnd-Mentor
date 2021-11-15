@@ -57,15 +57,29 @@
         display: block;
         right: 12%;
         top: 18%;
+        z-index: 1;
       }
 
       & .intro-how-we-work-inner-container {
         & .intro-container {
+          position: relative;
           padding: 10rem 73.9rem 12.6rem 16.7rem;
           text-align: left;
-          background-image: url(/images/bg-pattern-intro-left-desktop.svg),
-            url(/images/bg-pattern-intro-right-desktop.svg);
-          background-position: left -2.5rem bottom -30rem, right 0rem top -10rem;
+          background-image: url(/images/bg-pattern-intro-left-desktop.svg);
+          background-position: left -2.5rem bottom -30rem;
+
+          &::after {
+              content: '';
+              background-image: url(/images/bg-pattern-intro-right-desktop.svg);
+              background-repeat: no-repeat;
+              background-position: right top -8rem;
+              position: absolute;
+              top: 0;
+              right: 0;
+              height: 100%;
+              width: 100%;
+              z-index: 1;
+          }
 
           & hr {
             margin: 0 0 4rem 0;
@@ -136,6 +150,47 @@
           }
         }
       }
+    }
+
+    & footer {
+        padding-left: 16.4rem;
+        text-align: left;
+        background-image: url(/images/bg-pattern-footer-desktop.svg);
+        & .social-media {
+            display: flex;
+            justify-content: space-between;
+
+            & img {
+                display: inline-block;
+                width: 11.4rem;
+                height: 2rem;
+            }
+
+            & .social-media-icons {
+                margin-right: 5.9rem;
+                & a:hover {
+                color: $primary-darkviolet;
+            }
+            }
+            
+        }
+
+        & hr {
+            margin: 0;
+            width: 100%;
+        }
+
+        & .footer-info {
+            flex-direction: row;
+            gap: 18.2rem;
+
+            & .footer-details {
+                & :not(:nth-child(1)):hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
     }
   }
 }
