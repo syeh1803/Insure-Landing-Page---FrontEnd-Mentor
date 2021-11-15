@@ -8,7 +8,7 @@
         padding-top: 1.8rem;
         & nav {
           & img {
-            margin: 1rem 0 0 16.5rem;
+            margin: 1.5rem 0 3.5rem 16.5rem;
           }
 
           & button {
@@ -28,18 +28,110 @@
             list-style: none;
 
             & li:last-of-type {
+              margin: -0.2rem 0 3rem 0;
               margin-right: 16rem;
-              padding: 1.25rem 2.5rem;
+              padding: 1.2rem 2.5rem 1rem 2.5rem;
               background-color: $primary-darkviolet;
               color: $neutral-verylightgray;
             }
-            
-            & li:not(:last-of-type) {
-                margin-top: 1.3rem;
 
-                &:hover {
-                    color: $neutral-verydarkviolet;
-                }
+            & li:not(:last-of-type) {
+              margin-top: 1.3rem;
+
+              &:hover {
+                color: $neutral-verydarkviolet;
+              }
+            }
+          }
+        }
+      }
+    }
+    /* intro & how we work*/
+    .intro-how-we-work-container {
+      & img.mobile-intro {
+        display: none;
+      }
+
+      & img.desktop-intro {
+        position: absolute;
+        display: block;
+        right: 12%;
+        top: 18%;
+      }
+
+      & .intro-how-we-work-inner-container {
+        & .intro-container {
+          padding: 10rem 73.9rem 12.6rem 16.7rem;
+          text-align: left;
+          background-image: url(/images/bg-pattern-intro-left-desktop.svg),
+            url(/images/bg-pattern-intro-right-desktop.svg);
+          background-position: left -2.5rem bottom -30rem, right 0rem top -10rem;
+
+          & hr {
+            margin: 0 0 4rem 0;
+            display: block;
+            height: 0.3rem;
+            width: 30%;
+            background: $neutral-verylightgray;
+          }
+
+          & h1 {
+            font-size: 7.2rem;
+          }
+
+          & a button:hover {
+            color: $neutral-verydarkviolet;
+            background-color: $neutral-verylightgray;
+          }
+        }
+
+        & .how-we-work-container {
+          padding-left: 16.7rem;
+          padding-right: 17.9rem;
+          padding-top: 30.5rem;
+          text-align: left;
+          background-image: url(/images/bg-pattern-intro-left-desktop.svg);
+          background-repeat: no-repeat;
+          background-position-y: -19rem;
+          background-position-x: -2rem;
+
+          & hr {
+            margin: 0 0 7rem 0;
+            height: 0.3rem;
+            width: 15%;
+          }
+
+          & h1 {
+            font-size: 7.2rem;
+          }
+
+          & .info {
+            flex-direction: row;
+
+            & .info-details {
+              align-items: flex-start;
+            }
+          }
+
+          & .find-out-more {
+            display: flex;
+            justify-content: space-between;
+            padding: 7.8rem 8rem 7.8rem 8.4rem;
+            background-image: url(/images/bg-pattern-how-we-work-desktop.svg);
+            background-position-y: 0.2rem;
+
+            & h1 {
+              margin-right: 25rem;
+              font-size: 5.5rem;
+            }
+
+            & a button {
+              white-space: nowrap;
+
+              &:hover {
+                color: $neutral-verydarkviolet;
+                background-color: $neutral-verylightgray;
+              }
             }
           }
         }
