@@ -1,0 +1,49 @@
+@use "./colors.scss" as *;
+
+@media screen and (min-width: 1440px) {
+  body {
+    /* header style */
+    header {
+      & .container {
+        padding-top: 1.8rem;
+        & nav {
+          & img {
+            margin: 1rem 0 0 16.5rem;
+          }
+
+          & button {
+            display: none;
+          }
+
+          & ul {
+            display: block;
+            all: unset;
+            display: flex;
+            gap: 2rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            color: $neutral-darkgrayishviolet;
+            list-style: none;
+
+            & li:last-of-type {
+              margin-right: 16rem;
+              padding: 1.25rem 2.5rem;
+              background-color: $primary-darkviolet;
+              color: $neutral-verylightgray;
+            }
+            
+            & li:not(:last-of-type) {
+                margin-top: 1.3rem;
+
+                &:hover {
+                    color: $neutral-verydarkviolet;
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+}
